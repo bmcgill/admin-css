@@ -1,0 +1,3 @@
+name = Admin CSS
+description = Add a custom CSS file for a node add/edit page when using the front-end theme. Create an admin.css file in your theme/css/ directory.
+core = 7.x

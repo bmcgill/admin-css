@@ -1,0 +1,12 @@
+<?php
+function admin_css_preprocess_html(&$variables) {
+  if(arg(0) == 'node' && arg(1) == 'add' ||
+     arg(0) == 'node' && arg(2) == 'edit' ||
+     arg(0) == 'admin') {
+    // reference your current theme
+    $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
+    // reference your own stylesheet
+    $admin_css = $theme_path . '/css/admin.css';
+    drupal_add_css($admin_css, array('weight' => CSS_THEME));
+  }
+}
